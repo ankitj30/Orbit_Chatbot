@@ -1,0 +1,25 @@
+{
+  "name": "orbit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix Frontend\" \"npm run dev --prefix backend\"",
+    "install-all": "npm install && npm install --prefix Frontend && npm install --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitj30/Orbit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ankitj30/Orbit/issues"
+  },
+  "homepage": "https://github.com/ankitj30/Orbit#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

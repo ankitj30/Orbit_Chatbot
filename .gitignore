@@ -1,8 +1,162 @@
-node_modules/
+# ==============================================================================
+# Orbit MERN Project - Security-Focused Production .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment & Secret Credentials (CRITICAL - NEVER COMMIT)
+# ------------------------------------------------------------------------------
 .env
 .env.*
+*.env
+*.env.*
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+
+# Explicitly whitelist safe template/example files
+!.env.example
+!*.env.example
+!.env.template
+!*.env.template
+!.env.sample
+!*.env.sample
+
+# Private Keys, Certificates & Tokens
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.pkcs12
+id_rsa
+id_ed25519
+*.secret
+
+# ------------------------------------------------------------------------------
+# 2. Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+
+# ------------------------------------------------------------------------------
+# 3. Production Builds & Distribution Artifacts
+# ------------------------------------------------------------------------------
 dist/
+dist-ssr/
 build/
-.cache/
+out/
+.vite/
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 4. Logs & Process Information
+# ------------------------------------------------------------------------------
 logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------------------------------------------
+# 5. Diagnostic, Test & Scratch Scripts
+# ------------------------------------------------------------------------------
+# Diagnostic/scratch scripts containing local connection tests
+test-db.js
+test-backend.js
+test-search.js
+debug-*.js
+inspect-*.js
+list-models.js
+backend/test-search.js
+backend/debug-*.js
+backend/inspect-*.js
+backend/list-models.js
+backend/test-backend.js
+backend/test-gemini-rest.js
+backend/test-import.js
+backend/test-post.js
+
+# Testing coverage reports
+coverage/
+.nyc_output/
+
+# ------------------------------------------------------------------------------
+# 6. Generated Documents & Exports
+# ------------------------------------------------------------------------------
+*.pdf
+*.html
+!Frontend/index.html
+generate-html.js
+print-pdf.js
+*Interview Guide*
+*interview-guide*
+
+# ------------------------------------------------------------------------------
+# 7. Caches & Temporary Storage
+# ------------------------------------------------------------------------------
+.cache/
+.eslintcache
+.parcel-cache
+.turbo/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ------------------------------------------------------------------------------
+# 8. Operating System & Filesystem Junk
+# ------------------------------------------------------------------------------
+# macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ------------------------------------------------------------------------------
+# 9. IDEs & Code Editors
+# ------------------------------------------------------------------------------
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

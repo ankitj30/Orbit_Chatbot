@@ -45,6 +45,7 @@ export const ChatProvider = ({ children }) => {
             setCurrentThread(thread);
         } catch (error) {
             console.error("Failed to load messages", error);
+            alert("Failed to load chat: " + (error.response?.data?.message || error.message));
         }
     };
 
@@ -60,6 +61,7 @@ export const ChatProvider = ({ children }) => {
             setMessages([]);
         } catch (error) {
             console.error("Failed to create thread", error);
+            alert("Failed to create thread: " + (error.response?.data?.message || error.message));
         }
     };
 
